@@ -1,0 +1,124 @@
+EventLoop: http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+ECMAscript6: https://www.tutorialspoint.com/es6/es6_classes.htm
+
+Private Members in JavaScript: http://javascript.crockford.com/private.html, http://phrogz.net/js/classes/OOPinJS.html
+
+
+ES6 Promises, Async module
+
+
+Folder Oraganization:
+=====================
+		
+ 	app
+		v10
+			module1
+				models
+				file1.js
+				file2.js
+			module2
+			.
+			.
+			moduleN
+		v11
+		.
+		.
+		.
+		v20
+		.
+		.	
+	
+ 	common
+		logger.js
+		mysqlConnector.js		
+	configuration
+		dev.js
+		staging.js
+		prodction.js
+	test
+		scrpt1.js
+		scrpt2.js
+		...
+	index.js
+	package.json
+
+
+Response Format:
+================
+
+
+success
+========
+HTTP status code : 200
+
+{
+	success : {
+			data: json,
+			description: string/optional
+		  }
+}
+
+
+error
+========
+HTTP status code : 499
+{
+	error: {
+			errorCode: string,
+			description: string/optional,
+			data: json
+			
+	 	}
+}
+
+url syntax:
+==========
+
+/ms/version/module/*
+
+
+config syntax:
+=============
+
+
+
+
+{
+    "name" : "NAME",
+    "port": 5000,
+    "mysql":{
+        "ip" : "127.0.0.1",
+        "port": 3306
+    },
+    "modules" : {
+        "auth" : {
+            "versions" : ["v10", "v11"]
+        },
+        "user" : {
+            "versions" : ["v10"]
+        }
+    },
+    "altModules" : {
+        "auth" : {
+            "versions" : {
+                "v10" : "mainv10.js",
+                "v20" : "mainv20.js"
+            }
+        },
+        "user" : {
+            "versions" : {
+                "v10" : "v10.js"
+            }
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
