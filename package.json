@@ -1,0 +1,16 @@
+{
+  "name": "expressintro",
+  "version": "1.0.0",
+  "description": "Introduction to RESTful apis using Expressjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha test/test.js"
+  },
+  "author": "Kiran",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.0",
+    "lodash": "^4.17.4"
+  }
+}
